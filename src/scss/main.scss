@@ -1,39 +1,31 @@
 /*abstracts*/
-@import "abstracts/_helpers.scss";
-@import "abstracts/_iterators.scss";
-@import "abstracts/_font.scss";
-@import "abstracts/_graphics.scss";
-@import "abstracts/_responsive.scss";
-@import "abstracts/_themes.scss";
-@import "abstracts/_form.scss";
-@import "abstracts/_variables.scss";
+@import "abstracts/_fonts.scss";
 
-/*external*/
-
-/*
-* Project style
-*/
 /*base*/
 @import "base/_normalize.scss";
 @import "base/_defaults.scss";
+@import "base/mixins.scss";
 
-/*layouts*/
-@import "layouts/_footer.scss";
-@import "layouts/_header.scss";
-
-/*components*/
-
-
-/*themes*/
-@import "themes/_spaces.scss";
-@import "themes/_colors.scss";
-@import "themes/_text.scss";
-@import "themes/_buttons.scss";
-@import "themes/_grid.scss";
-@import "themes/_positions.scss";
-@import "themes/_form.scss";
-@import "themes/_images.scss";
-@import "themes/_screen.scss";
+/* lib */
+@import "lib/loco.scss";
 
 /*pages*/
+@import "sections/page-attention/page-attention.scss";
+@import "sections/page-choice/page-choice.scss";
+@import "sections/page-direction/page-direction.scss";
+@import "sections/page-docs/page-docs.scss";
+@import "sections/page-nav/page-nav.scss";
+@import "sections/page-request/page-reguest.scss";
+@import "sections/page-requirements/page-requirements.scss";
+@import "sections/page-stage/page-stage.scss";
+@import "sections/page-target/page-target.scss";
+@import "sections/top-page/top-page.scss";
+
+/*themes*/
+@import "themes/_footer.scss";
+@import "themes/_header.scss";
+
+
+
+
 

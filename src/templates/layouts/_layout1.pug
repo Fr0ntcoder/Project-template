@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta#viewport(name="viewport", content="width=414, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes")
+		title SiteTemplate
+		script.
+			//mobile viewport hack
+			(function(){
+
+			function apply_viewport(){
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)   ) {
+
+				var ww = window.screen.width;
+				var mw = 414; // min width of site
+				var ratio =  ww / mw; //calculate ratio
+				var viewport_meta_tag = document.getElementById('viewport');
+				if( ww < mw){ //smaller than minimum size
+					viewport_meta_tag.setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio * 1.4 + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + mw);
+				}
+				else { //regular size
+					viewport_meta_tag.setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+				}
+				}
+			}
+
+			//ok, i need to update viewport scale if screen dimentions changed
+			window.addEventListener('resize', function(){
+				apply_viewport();
+			});
+
+				apply_viewport();
+			}());
+
+	block vars
+	include _mixins
+	body(class=bodyClass)
+		.all-wrapper
+			section.top-page
+				.top-page__inner
+					.top-page__video
+						video#video-background( loop="", poster=require("/img/poster2.png"), muted="")
+							source(src="../videos/v1.mp4", type="video/mp4")
+					include _header1		
+			block content
+		block externalScripts
+		block scripts
+		block inlineScripts

@@ -1,0 +1,57 @@
+block header
+	header.header
+		.container
+			.header-wrap
+				.header-logo
+					img(src=require('/img/logo.svg'))
+				.header-burger(@click="openMenu")
+					img(src=require("/img/burger-menu.svg"))
+				.header-nav
+					.header-menu
+						nav
+							ul
+								li.sub-menu-parent(tab-index="0")
+									span конкурсы (3)
+										img(src=require("/img/arrow.svg"))
+										ul.sub-menu
+											li
+												a(href="/") конкурс № 1
+											li
+												a(href="/") конкурс № 2
+											li
+												a(href="/") конкурс № 2
+								li
+									a(href="/") новости
+								li
+									a(href="/") частые вопросы
+					.header-lk
+						a(href="/")
+							img(src=require("/img/user.svg"))
+							span кабинет
+	.container
+		.top-page__desc
+			.top-page__left
+				h2 Грантовый конкурс № 1 благотворительного фонда «Абсолют-Помощь» 2021
+				ul
+					li
+						span приём заявок
+						p до 31 мая 2021
+					li
+						span география
+						p Россия
+					li
+						span бюджет конкурса
+						p 500 млн. <span class="rub">₽</span>
+				.top-page__form
+					+btn("подать заявку")
+			.top-page__list
+				ul
+					li
+						span приём заявок
+						p до 31 мая 2021
+					li
+						span география
+						p Россия
+					li
+						span бюджет конкурса
+						p 500 млн. <span class="rub">₽</span>

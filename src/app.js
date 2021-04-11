@@ -1,8 +1,8 @@
 /**
  * fonts
  */
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import './fonts/OpenSans/stylesheet.css';
+/* import "@fortawesome/fontawesome-free/css/all.min.css"; */
+/* import './fonts/OpenSans/stylesheet.css'; */
 
 /**
  * style lib

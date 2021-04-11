@@ -1,0 +1,34 @@
+block header
+	header.header
+		.container
+			.header-wrap
+				.header-logo
+					img(src=require('/img/logo.svg'))
+				.header-burger(@click="openMenu")
+					img(src=require("/img/burger-menu.svg"))
+				.header-nav
+					.header-menu
+						nav
+							ul
+								li.sub-menu-parent(tab-index="0")
+									span конкурсы (3)
+										img(src=require("/img/arrow.svg"))
+										ul.sub-menu
+											li
+												a(href="/") конкурс № 1
+											li
+												a(href="/") конкурс № 2
+											li
+												a(href="/") конкурс № 2
+								li
+									a(href="/") новости
+								li
+									a(href="/") частые вопросы
+					.header-lk
+						a(href="/")
+							img(src=require("/img/user.svg"))
+							span кабинет
+	.container
+		.top-page__desc
+			.top-page__left
+				h2 Грантовые конкурсы благотворительного фонда Абсолют—Помощь

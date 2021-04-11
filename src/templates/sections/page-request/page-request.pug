@@ -1,0 +1,19 @@
+section#how-request.container
+    .page-request
+        .page-request__left
+            h2 Как подать заявку?
+        .page-request__tight
+            - var items = [{num: 2, text: "Разработайте проект согласно тематике конкурса"},{num: 3, text: "Зарегистрируйтесь на сайте и перейдите в личный кабинет"},{num: 4, text: "Заполните заявку на участие в конкурсе и загрузите проект"},{num: 5, text: "Отправьте заявку на проверку и регистрацию"}]
+            ul
+                li
+                    p 1
+                    p Внимательно изучите <a href="">Положение о конкурсе</a>
+                each item in items
+                    li 
+                        p=item.num 
+                        p=item.text
+                li
+                    p
+                    p 
+                        +btn("подать заявку")
+            

@@ -1,0 +1,54 @@
+.sticky-menu
+    .sticky-menu__top
+        .container
+            .sticky-menu__top-wrap
+                .sticky-menu__logo
+                    img(src=require("/img/m-logo.svg"))
+                div
+                    .header-nav
+                        .header-menu
+                            nav
+                                ul
+                                    li.sub-menu-parent(tab-index="0")
+                                        span
+                                        | конкурсы (3)
+                                        img(src=require("/img/arrow.svg"))
+                                        ul.sub-menu
+                                            li
+                                                a(href="/") конкурс № 1
+                                            li
+                                                a(href="/") конкурс № 2
+                                            li
+                                                a(href="/") конкурс № 2
+                                    li
+                                        a(href="/") новости
+                                    li
+                                        a(href="/") частые вопросы
+                        .header-lk
+                            a(href="/")
+                                img(src=require("/img/user.svg"))
+                                span кабинет
+                    .sticky-menu__burger
+                        img(src=require("/img/burger-menu.svg"))
+    .sticky-menu__bottom
+        .container
+            .sticky-menu__bottom-wrap
+                .sticky-menu__nav.page-nav-js
+                    ul
+                        li
+                            a(href="#target") Цель
+                        li
+                            a(href="#how-request") Как подать заявку
+                        li
+                            a(href="#direction") Направления
+                        li
+                            a(href="#requirements") Требования
+                        li
+                            a(href="#stages") Этапы
+                        li
+                            a(href="#docs") Документы
+                a.sticky-menu__btn(href="#request")
+                    span заявка
+                    picture
+                        //- source(media='(max-width: 768px)' srcset='/img/send-sm.svg')
+                        img(src=require('/img/send-sm.svg'))

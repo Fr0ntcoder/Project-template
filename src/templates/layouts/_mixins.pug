@@ -1,0 +1,6 @@
+mixin btn(text)
+	span.btn-send
+		span=text
+		picture
+			source(media='(max-width: 768px)' srcset=require('/img/send-sm.svg'))
+			img(src=require('/img/send.svg')) 

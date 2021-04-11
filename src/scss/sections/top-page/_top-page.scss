@@ -1,0 +1,247 @@
+.top-page {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	background: #e2e1e1;
+	&__inner {
+		position: sticky;
+		top: 0;
+		// left: 0;
+		z-index: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/* min-height: 100vh; */
+		min-height: calc(100vh);
+		width: 100%;
+		@media screen and (max-width: 768px) {
+			min-height: calc(100vh / 2);
+		}
+		@media screen and (max-width: 767px) {
+			min-height: calc(var(--vh) * 100);
+		}
+	}
+	&__video {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -100;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+	}
+	&__desc {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding-bottom: 100px;
+		position: relative;
+		z-index: 2;
+		@media screen and (max-width: 1170px) {
+			padding-bottom: 35px;
+		}
+	}
+	&__left {
+		max-width: 770px;
+		@media screen and (max-width: 1170px) {
+			max-width: 350px;
+		}
+		@media screen and (max-width: 600px) {
+			max-width: 100%;
+		}
+		ul {
+			display: none;
+			@media screen and (max-width: 600px) {
+				display: flex;
+				align-items: flex-start;
+				margin-top: 20px;
+				li {
+					margin-right: 25px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+				span {
+					font-size: 13px;
+					line-height: 18px;
+				}
+				p {
+					margin-top: 2px;
+				}
+			}
+		}
+	}
+
+	&__form {
+		margin-top: 40px;
+		padding-right: 20px;
+		@media screen and (max-width: 1170px) {
+			margin-top: 20px;
+		}
+		@media screen and (max-width: 600px) {
+			margin-top: 30px;
+		}
+		.btn-send {
+			transition: all 0.3s ease;
+			&:hover {
+				// box-shadow: 0px -5px 30px 15px #ffd950, 0px 5px 30px 15px #ffd950;
+				background-color: #ffd959;
+				border: 2px solid #ffd959;
+			}
+		}
+	}
+	&__list {
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
+		li {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			span {
+				@media screen and (max-width: 1170px) {
+					font-size: 13px;
+					line-height: 18px;
+				}
+			}
+			p {
+				margin-top: 5px;
+				@media screen and (max-width: 1170px) {
+					margin-top: 2px;
+				}
+				
+			}
+		}
+	}
+}
+
+.rub {
+	font-family: "Arial";
+	font-size: 21px!important;
+	@media screen and (max-width: 900px) {
+		font-size: 15px!important;
+	}
+}
+
+.sub-form {
+	width: 100%;
+	label {
+		position: relative;
+		display: block;
+		width: 100%;
+		input[type="email"],
+		input[type="text"],
+		input[type="tel"] {
+			width: 100%;
+			height: 90px;
+			outline: none;
+			appearance: none;
+			border: 2px solid #1d3e6f;
+			color: #1d3e6f;
+			font-size: 24px;
+			line-height: 30px;
+			letter-spacing: -0.01em;
+			padding: 0px 75px 0 30px;
+			background: transparent;
+			/* @include input-placeholder() {
+				color: #1d3e6f;
+				font-size: 24px;
+				line-height: 30px;
+			} */
+		}
+	}
+	&__btn {
+		position: absolute;
+		right: 30px;
+		top: 28px;
+		background: unset;
+		border: unset;
+		box-shadow: unset;
+		cursor: pointer;
+	}
+}
+
+.top-page__grant {
+	.top-page__inner {
+		// height: 100%;
+		min-height: 100vh;
+	}
+	.top-page__video {
+		// height: 100vh;
+	}
+	.top-page__video {
+		// height: 100%;
+		// min-height: 100vh;
+	}
+}
+
+.grant {
+	position: relative;
+	z-index: 1;
+	padding-bottom: 140px;
+	&::after {
+		content: "";
+		width: calc(100% - 4px);
+		// height: 20px;
+		position: absolute;
+		left: 4px;
+
+
+		bottom: -3px;
+		box-shadow: 0px 11px 20px 20px white;
+	
+	}
+	// margin-top: 65px;
+	.top-page__desc {
+		align-items: flex-start;
+		padding-bottom: 50px;
+		border-bottom: 2px solid #1d3e6f;
+		margin-bottom: 60px;
+		&:first-child {
+			margin-top: 65px;
+			@media screen and (max-width: 1170px) {
+				margin-top: 105px;
+			}
+			@media screen and (max-width: 767px) {
+				margin-top: 40px;
+			}
+		}
+		@media screen and (max-width: 1170px) {
+			padding-bottom: 50px;
+		}
+		.btn-send {
+			&:hover {
+				box-shadow: unset;
+			}
+		}
+	}
+	.top-page__left {
+		max-width: 624px;
+		@media screen and (max-width: 1170px) {
+			max-width: 479px;
+		}
+		h2 {
+			font-size: 34px;
+			line-height: 42px;
+			@media screen and (max-width: 1170px) {
+				font-size: 26px;
+				line-height: 30px;
+			}
+		}
+	}
+	.top-page__form {
+		max-width: 305px;
+		@media screen and (max-width: 1170px) {
+			max-width: 324px;
+		}
+		@media screen and (max-width: 767px) {
+			max-width: 225px;
+		}
+	}
+}
+.all-wrapper-grant {
+	min-height: 100vh;
+}
